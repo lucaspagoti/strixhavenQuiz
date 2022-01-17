@@ -1,5 +1,14 @@
-<app-navigation-bar></app-navigation-bar>
-<br>
-<br>
-<br>
-<app-quiz-form></app-quiz-form>
+<div clas="usuario-container">
+  <mat-progress-spinner [hidden]="!loading"></mat-progress-spinner>
+  <!--Componente de formulario-->
+  <form [formGroup]="formGroup">
+    <mat-form-field *ngFor="let checkbox of outrasEspecialidades">
+      <mat-checkbox [checked]="checkbox.checked">{{ checkbox.name }}</mat-checkbox>
+
+      <mat-form-field>
+        <mat-label>Nova Especialidade</mat-label>
+        <input matInput (keyup.enter)="createCheckbox()">
+      </mat-form-field>
+    </mat-form-field>
+  </form>
+</div>
