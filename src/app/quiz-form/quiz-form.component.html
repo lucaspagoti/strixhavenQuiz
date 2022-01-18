@@ -1,1 +1,6 @@
-<p>quiz-form works!</p>
+<h2>Pergunta:</h2>
+
+
+<div *ngFor="let respostas of respostas" (click)="salvarPesoPergunta(respostas.peso)">
+  <span>{{ respostas.texto }}</span>
+</div>
