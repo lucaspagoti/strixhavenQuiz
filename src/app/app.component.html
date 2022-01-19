@@ -1,7 +1,8 @@
 <h2>Fomulário para saber qual a sua casa do Harry Potter</h2>
+
 <form [formGroup]="formGroup">
-  <mpv-formulario pergunta="Qual a sua cor favorita?" respostas="[{texto: 'azul', peso: 1}, {texto: 'verde', peso: 2}]" key="corFavorita"></mpv-formulario>
-  <mpv-formulario pergunta="Você é corajoso?" respostas="[{texto: 'Sim', peso: 1}, {texto: 'Não', peso: 2}]" key="corajosa"></mpv-formulario>
-  <mpv-formulario pergunta="Você sabe TI?" respostas="[{texto: 'Sim', peso: 1}, {texto: 'Não', peso: 2}]" key="sabeTi"></mpv-formulario>
-  <mpv-formulario pergunta="Você é estudioso?" respostas="[{texto: 'Sim', peso: 1}, {texto: 'Não', peso: 2}]" key="estudiosa"></mpv-formulario>
+  <app-quiz-form pergunta="Qual a sua cor favorita?" [respostas]="[{texto: 'azul', peso: 1}, {texto: 'verde', peso: 2}]" key="corFavorita"></app-quiz-form>
+  <app-quiz-form pergunta="Você é corajoso?" [respostas]="[{texto: 'Sim', peso: 1}, {texto: 'Não', peso: 2}]" key="corajosa"></app-quiz-form>
+  <app-quiz-form pergunta="Você sabe TI?" [respostas]="[{texto: 'Sim', peso: 1}, {texto: 'Não', peso: 2}]" key="sabeTi"></app-quiz-form>
+  <app-quiz-form pergunta="Você é estudioso?" [respostas]="[{texto: 'Sim', peso: 1}, {texto: 'Não', peso: 2}]" key="estudiosa"></app-quiz-form>
 </form>

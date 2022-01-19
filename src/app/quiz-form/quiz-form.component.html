@@ -1,6 +1,4 @@
-<h2>Pergunta:</h2>
-
-
-<div *ngFor="let respostas of respostas" (click)="salvarPesoPergunta(respostas.peso)">
-  <span>{{ respostas.texto }}</span>
+<h2>{{ pergunta }}</h2>
+<div *ngFor="let resposta of respostas" (click)="salvarPesoPergunta(resposta.peso)">
+  <span>{{ resposta.texto }}</span>
 </div>

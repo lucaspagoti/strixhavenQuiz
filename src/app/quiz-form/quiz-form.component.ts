@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 
 @Component({
@@ -8,8 +8,8 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./quiz-form.component.scss']
 })
 export class QuizFormComponent implements OnInit {
-  public formGroup: FormGroup | undefined;
-
+  
+  
   @Input() 
   pergunta!: string; 
   @Input()
@@ -20,7 +20,11 @@ export class QuizFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+         
+   
+    
   }
+
 
   salvarPesoPergunta(peso: number) {
     this.setPesoFormulario.emit({key: this.key, peso: peso});

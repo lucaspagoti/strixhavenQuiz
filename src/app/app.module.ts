@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { QuizFormComponent } from './quiz-form/quiz-form.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormGroup } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +20,8 @@ import { FormGroup } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormGroup
+    FormsModule,
+    ReactiveFormsModule,
   
   ],
   providers: [],
