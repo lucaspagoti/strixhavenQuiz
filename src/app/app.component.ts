@@ -6,6 +6,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  matTab: number = 0;
   formGroup = new FormGroup({
     corFavorita: new FormControl(), 
     corajosa:  new FormControl(),
@@ -13,4 +14,12 @@ export class AppComponent {
     estudiosa: new FormControl()
   }) 
   title = 'strixQuiz';
+
+  avancar(){
+    this.matTab=this.matTab+1
+  }
+  retornar(){
+    this.matTab=this.matTab-1
+  }
+
 }
