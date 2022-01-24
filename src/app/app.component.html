@@ -1,28 +1,30 @@
 <app-navigation-bar></app-navigation-bar>
 <h2>Fomulário para saber qual a sua casa do Harry Potter</h2>
 
-<mat-tab-group [selectedIndex]="matTab">
-  <mat-tab label="Qual a sua cor favorita?">
-    <ng-template matTabContent>
-      <app-quiz-form [index]="0"></app-quiz-form>
-    </ng-template>
-  </mat-tab>
-  <mat-tab label="Você é corajoso?">
-    <ng-template matTabContent>
-      <app-quiz-form [index]="1"></app-quiz-form>
-    </ng-template>
-  </mat-tab>
-  <mat-tab label="Você sabe TI?">
-    <ng-template matTabContent>
-      <app-quiz-form [index]="2"></app-quiz-form>
-    </ng-template>
-  </mat-tab>
-  <mat-tab label="Você é estudioso?">
-    <ng-template matTabContent>
-      <app-quiz-form [index]="3"></app-quiz-form>
-    </ng-template>
-  </mat-tab>
-</mat-tab-group>
+<div class="container">
+  <mat-tab-group [selectedIndex]="matTab">
+    <mat-tab label="Qual a sua cor favorita?">
+      <ng-template matTabContent>
+        <app-quiz-form [index]="0"></app-quiz-form>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Você é corajoso?">
+      <ng-template matTabContent>
+        <app-quiz-form [index]="1"></app-quiz-form>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Você sabe TI?">
+      <ng-template matTabContent>
+        <app-quiz-form [index]="2"></app-quiz-form>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Você é estudioso?">
+      <ng-template matTabContent>
+        <app-quiz-form [index]="3"></app-quiz-form>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
 
-<button (click)="avancar()">Continuar</button>
-<button (click)="retornar()">Voltar</button>
+  <button (click)="avancar()">Continuar</button>
+  <button (click)="retornar()">Voltar</button>
+</div>
