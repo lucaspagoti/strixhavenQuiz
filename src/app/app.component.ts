@@ -21,5 +21,4 @@ export class AppComponent {
   retornar(){
     this.matTab=this.matTab-1
   }
-
 }

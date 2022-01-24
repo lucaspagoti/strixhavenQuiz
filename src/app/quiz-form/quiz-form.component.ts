@@ -21,12 +21,8 @@ perguntas = [
 
 @Input() index: number = 0;
 
-
   constructor() { }
 
   ngOnInit(): void {    
   }
-
-  
-
 }
