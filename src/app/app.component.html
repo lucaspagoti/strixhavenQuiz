@@ -1,30 +1,32 @@
 <app-navigation-bar></app-navigation-bar>
-<h2>Fomulário para saber qual a sua casa do Harry Potter</h2>
-
-<div class="container">
+<div class="text-aling: center">
+  <h2>Formulário para saber qual a sua casa do Harry Potter</h2>
+</div>
+<div class=" container">
   <mat-tab-group [selectedIndex]="matTab">
-    <mat-tab label="Qual a sua cor favorita?">
+    <mat-tab label="">
       <ng-template matTabContent>
         <app-quiz-form [index]="0"></app-quiz-form>
       </ng-template>
     </mat-tab>
-    <mat-tab label="Você é corajoso?">
+    <mat-tab label="">
       <ng-template matTabContent>
         <app-quiz-form [index]="1"></app-quiz-form>
       </ng-template>
     </mat-tab>
-    <mat-tab label="Você sabe TI?">
+    <mat-tab label="">
       <ng-template matTabContent>
         <app-quiz-form [index]="2"></app-quiz-form>
       </ng-template>
     </mat-tab>
-    <mat-tab label="Você é estudioso?">
+    <mat-tab label="">
       <ng-template matTabContent>
         <app-quiz-form [index]="3"></app-quiz-form>
       </ng-template>
     </mat-tab>
   </mat-tab-group>
-
-  <button (click)="avancar()">Continuar</button>
-  <button (click)="retornar()">Voltar</button>
+  <hr>
+  <button class="btn btn-primary" (click)="avancar()">Continuar</button>
+  <br>
+  <button class="btn btn-primary" (click)="retornar()">Voltar</button>
 </div>

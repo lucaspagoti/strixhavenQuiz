@@ -1,4 +1,6 @@
-<h2>{{ perguntas[index].texto }}</h2>
-<div *ngFor="let resposta of perguntas[index].respostas">
-  <span>{{ resposta.texto }}</span>
+<div class="container">
+  <h2>{{ perguntas[index].texto }}</h2>
+  <div *ngFor="let resposta of perguntas[index].respostas">
+    <span>{{ resposta.texto }}</span>
+  </div>
 </div>
