@@ -5,10 +5,8 @@ div {
   align-items: center;
   cursor: pointer;
   width: auto;
-  padding: 15px 115px;
-  background-color: white;
   border-radius: 16px;
-
+  padding: 5px;
 
 
 :hover {
@@ -21,6 +19,10 @@ div {
 :active {
   position:relative;
 	top:1px;
+}
+
+#pergunta {
+	background-color: white;
 }
 
 }

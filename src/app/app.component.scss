@@ -8,6 +8,12 @@ div {
   
 }
 
+.main {
+  background-color: white;
+  /* max-width: 700px; */
+  padding: 50px 80px;
+  border-radius:26px;
+}
 
 .matTab {
   mat-tab-header {
@@ -16,3 +22,4 @@ div {
     height: 0;
   }
 }
+
