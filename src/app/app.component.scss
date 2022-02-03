@@ -1,19 +1,17 @@
 div {
-  display: flex;
+  display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
-  :hover {
-    transition: background-color 0.5s ease-in-out;
-    background-color: burlywood;
-  }
+  
+  
 }
+
 
 .matTab {
   mat-tab-header {
-    display: none;
+    display: none !important;
     width: 0;
     height: 0;
   }

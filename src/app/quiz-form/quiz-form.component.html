@@ -1,6 +1,8 @@
 <div id="pergunta" class="container">
   <h2>{{ perguntas[index].texto }}</h2>
   <div *ngFor="let resposta of perguntas[index].respostas">
-    <span>{{ resposta.texto }}</span>
+    <button (click)="somaPontos(resposta.peso)" >{{ resposta.texto }}</button>
   </div>
 </div>
+
+<script class="array" type="text/typescript" src="quiz-form.component.ts"></script>
