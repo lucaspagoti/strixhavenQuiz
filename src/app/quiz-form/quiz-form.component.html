@@ -1,8 +1,6 @@
 <div id="pergunta" class="container">
-  <h2>{{ perguntas[index].texto }}</h2>
-  <div *ngFor="let resposta of perguntas[index].respostas">
-    <button (click)="somaPontos(resposta.peso)" >{{ resposta.texto }}</button>
+  <h2>{{ pergunta.texto }}</h2>
+  <div [ngClass]="{ 'checked': resposta.peso === peso }" *ngFor="let resposta of pergunta.respostas">
+    <button (click)="somaPonto(pergunta.key, resposta.peso)" >{{ resposta.texto }}</button>
   </div>
 </div>
-
-<script class="array" type="text/typescript" src="quiz-form.component.ts"></script>

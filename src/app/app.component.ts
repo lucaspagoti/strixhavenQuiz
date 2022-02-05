@@ -15,8 +15,18 @@ export class AppComponent implements AfterViewInit{
     corajosa:  new FormControl(),
     sabeTi: new FormControl(),
     estudiosa: new FormControl()
-  }) 
+    
+  })
+  perguntas = [
+    { texto: "Qual a sua cor favorita?", respostas: [{texto: 'azul', peso: 1}, {texto: 'roxo', peso: 2} , {texto: 'verde', peso: 3}], key: "corFavorita" }, 
+    { texto: "Você é corajoso?", respostas: [{texto: 'Sim', peso: 1}, {texto: 'Não', peso: 2}], key:"corajosa" },
+    { texto: "Você sabe TI?", respostas: [{texto: 'Sim', peso: 1}, {texto: 'Não', peso: 2}], key:"sabeTi" },
+    { texto: "Você é estudioso?", respostas: [{texto: 'Sim', peso: 1}, {texto: 'Não', peso: 2}], key:"estudiosa" },
+   ]
+
   title = 'strixQuiz';
+
+
 
   avancar(){
     this.matTab=this.matTab+1
@@ -24,6 +34,21 @@ export class AppComponent implements AfterViewInit{
   }
   retornar(){
     this.matTab=this.matTab-1
+  }
+
+  salvarResposta(evento:{ key: string, peso:number } ){
+    this.formGroup.get(evento.key).setValue(evento.peso)
+   
+   ///quando aumentar as perguntas, aumentar esse matTab
+    if (this.matTab === 3){
+      let soma = 0 
+      const getRaw = this.formGroup.getRawValue();
+      
+      for(const chave in getRaw){
+        soma += getRaw[chave]
+      }
+      
+    } 
   }
 
   ngAfterViewInit() { this.pontosTotal = this.child.pontosTotal }

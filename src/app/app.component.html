@@ -5,28 +5,30 @@
   </div>
   <div id="questions" class="container">
     <mat-tab-group class="matTab" [selectedIndex]="matTab">
-      <mat-tab label="">
+      
+      <mat-tab>
         <ng-template matTabContent>
-          <app-quiz-form [index]="0"></app-quiz-form>
+          <app-quiz-form (resposta)="salvarResposta($event)" [clickPergunta]="formGroup.get(perguntas[0].key).value" [pergunta]="perguntas[0]"></app-quiz-form>
         </ng-template>
       </mat-tab>
-      <mat-tab label="">
+      <mat-tab>
         <ng-template matTabContent>
-          <app-quiz-form [index]="1"></app-quiz-form>
+          <app-quiz-form (resposta)="salvarResposta($event)" [clickPergunta]="formGroup.get(perguntas[1].key).value" [pergunta]="perguntas[1]"></app-quiz-form>
         </ng-template>
       </mat-tab>
-      <mat-tab label="">
+      <mat-tab>
         <ng-template matTabContent>
-          <app-quiz-form [index]="2"></app-quiz-form>
+          <app-quiz-form (resposta)="salvarResposta($event)" [clickPergunta]="formGroup.get(perguntas[2].key).value" [pergunta]="perguntas[2]"></app-quiz-form>
         </ng-template>
       </mat-tab>
-      <mat-tab label="">
+      <mat-tab>
         <ng-template matTabContent>
-          <app-quiz-form [index]="3"></app-quiz-form>
+          <app-quiz-form (resposta)="salvarResposta($event)" [clickPergunta]="formGroup.get(perguntas[3].key).value" [pergunta]="perguntas[3]"></app-quiz-form>
         </ng-template>
       </mat-tab>
     </mat-tab-group>
     <hr>
+<!--     quando aumentar as perguntas, aumentar o número desse matTab -->
     <button [disabled]="matTab === 3" class="btn btn-primary" (click)="avancar()">Continuar</button>
     <br>
     <button [disabled]="matTab === 0" class="btn btn-primary" (click)="retornar()">Voltar</button>
